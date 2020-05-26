@@ -6,7 +6,7 @@ export const getProducts = async product => {
   
     const cleanedData = cleanProductData(spliceData);
     if (!response.ok) {
-      throw new Error('Error fetching the makeup products');
+        throw new Error('Error fetching the makeup products');
     }
     return await Promise.all(cleanedData);
 }
