@@ -1,4 +1,4 @@
-export const getProduct = async product => {
+export const getProducts = async product => {
     const url = `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${product}`;
     const response = await fetch(url);
     const data = await response.json();
