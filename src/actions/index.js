@@ -1,29 +1,29 @@
-export const addFoundations = foundation => ({
+export const addFoundations = foundations => ({
     type: 'ADD_FOUNDATIONS',
-    foundation
+    foundations
 });
 
-export const addEyeShadows = eyeShadow => ({
+export const addEyeShadows = eyeShadows => ({
     type: 'ADD_EYESHADOW',
-    eyeShadow
+    eyeShadows
 });
 
-export const addBlushes = blush => ({
+export const addBlushes = blushes => ({
     type: 'ADD_BLUSH',
-    blush
+    blushes
 });
 
-export const addBronzers = bronzer => ({
+export const addBronzers = bronzers => ({
     type: 'ADD_BRONZERS',
-    bronzer
+    bronzers
 });
 
-export const addLipsticks = lipstick => ({
+export const addLipsticks = lipsticks => ({
     type: 'ADD_LIPSTICKS',
-    lipstick
+    lipsticks
 });
 
-export const addMascaras = mascara => ({
+export const addMascaras = mascaras => ({
     type: 'ADD_MASCARA',
-    mascara
+    mascaras
 });
