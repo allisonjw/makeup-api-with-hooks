@@ -5,12 +5,14 @@ import { eyeShadowsReducer } from './eyeShadowsReducer';
 import { foundationsReducer } from './foundationsReducer';
 import { lipsticksReducer } from './lipsticksReducer';
 import { mascarasReducer } from './mascarasReducer';
+import { isLoadingReducer } from './isLoadingReducer';
 
 export const rootReducer = combineReducers ({
-    addBlushes: blushesReducer,
-    addBronzers: bronzersReducer,
-    addEyeShadows: eyeShadowsReducer,
-    addFoundations: foundationsReducer,
-    addLipsticks: lipsticksReducer,
-    addMascaras: mascarasReducer
+    blushes: blushesReducer,
+    bronzers: bronzersReducer,
+    eyeShadows: eyeShadowsReducer,
+    foundations: foundationsReducer,
+    lipsticks: lipsticksReducer,
+    mascaras: mascarasReducer,
+    isLoading: isLoadingReducer
 });

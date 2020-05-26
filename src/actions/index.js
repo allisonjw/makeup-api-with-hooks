@@ -27,3 +27,8 @@ export const addMascaras = mascaras => ({
     type: 'ADD_MASCARA',
     mascaras
 });
+
+export const isLoading = isLoading => ({
+    type: 'SET_LOADING',
+    isLoading
+});
