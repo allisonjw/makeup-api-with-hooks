@@ -4,12 +4,12 @@ export const addFoundations = foundations => ({
 });
 
 export const addEyeShadows = eyeShadows => ({
-    type: 'ADD_EYESHADOW',
+    type: 'ADD_EYESHADOWS',
     eyeShadows
 });
 
 export const addBlushes = blushes => ({
-    type: 'ADD_BLUSH',
+    type: 'ADD_BLUSHES',
     blushes
 });
 
@@ -24,7 +24,7 @@ export const addLipsticks = lipsticks => ({
 });
 
 export const addMascaras = mascaras => ({
-    type: 'ADD_MASCARA',
+    type: 'ADD_MASCARAS',
     mascaras
 });
 
