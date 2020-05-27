@@ -4,6 +4,9 @@ import './App.scss';
 import { getProducts } from '../Util/apiCall';
 import { addFoundations, addEyeShadows, addBlushes, addBronzers, addLipsticks, addMascaras, isLoading } from '../actions';
 import Nav from '../Nav/Nav';
+import Categories from '../Categories/Categories';
+import { Product } from '../Product/Product';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -13,58 +16,52 @@ export const App = () => {
   const [bronzer, setAllBronzers] = useState([]);
   const [lipstick, setAllLipsticks] = useState([]);
   const [mascara, setAllMascaras] = useState([]);
-  // const allFoundations = useSelector(state => state.foundations)
-  // useSelector(state => state.eyeShadows)
-  // useSelector(state => state.blushes)
-  // useSelector(state => state.bronzers)
-  // useSelector(state => state.lipsticks)
-  // useSelector(state => state.mascaras)
 
- const fetchProducts = async () => {
-  try {
-      isLoading(true);
-      const foundations = await getProducts('foundation');
-      setAllFoundations(foundations);
-      dispatch(addFoundations(foundations));
+  const fetchProducts = async () => {
+      try {
+          isLoading(true);
+          const foundations = await getProducts('foundation');
+          setAllFoundations(foundations);
+          dispatch(addFoundations(foundations));
 
-      const eyeShadows = await getProducts('eyeshadow');
-      setAllEyeShadows(eyeShadows);
-      dispatch(addEyeShadows(eyeShadows));
+          const eyeShadows = await getProducts('eyeshadow');
+          setAllEyeShadows(eyeShadows);
+          dispatch(addEyeShadows(eyeShadows));
 
-      const blushes = await getProducts('blush');
-      setAllBlushes(blushes);
-      dispatch(addBlushes(blushes));
+          const blushes = await getProducts('blush');
+          setAllBlushes(blushes);
+          dispatch(addBlushes(blushes));
 
-      const bronzers = await getProducts('bronzer');
-      setAllBronzers(bronzers);
-      dispatch(addBronzers(bronzers));
+          const bronzers = await getProducts('bronzer');
+          setAllBronzers(bronzers);
+          dispatch(addBronzers(bronzers));
 
-      const lipsticks = await getProducts('lipstick');
-      setAllLipsticks(lipsticks);
-      dispatch(addLipsticks(lipsticks));
+          const lipsticks = await getProducts('lipstick');
+          setAllLipsticks(lipsticks);
+          dispatch(addLipsticks(lipsticks));
 
-      const mascaras = await getProducts('mascara');
-      setAllMascaras(mascaras);
-      dispatch(addMascaras(mascaras));
+          const mascaras = await getProducts('mascara');
+          setAllMascaras(mascaras);
+          dispatch(addMascaras(mascaras));
 
-    } catch({ message }) {
-      isLoading(false)
-      console.log(message);
-  }
- };
+      } catch({ message }) {
+          isLoading(false)
+          console.log(message);
+      }
+  };
 
-    useEffect(() => {
-      fetchProducts();
-    }, []);
+        useEffect(() => {
+          fetchProducts();
+        }, []);
 
-    let allCategories = [...foundation, ...mascara, ...eyeShadow, ...blush, ...bronzer, ...lipstick];
+  
     return (
-      <main className="App">
-        <p>
-          Makeup Api.
-        </p>
-        <Nav />
-     </main>
+      <Switch >
+        <Route exact path='/' render={() => <> <Nav /> <Categories /> </>} />
+        <Route exact path='/products/:type' render={({match}) => {
+            let productType = Object.keys(this.props).find(type => type === match.params.type)
+          return <> <Nav /><Product productType={this.props[productType]} toggleCollection={this.toggleCollection} /> </>}}/>
+     </Switch >
     );
 };
 
