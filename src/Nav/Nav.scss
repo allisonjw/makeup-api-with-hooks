@@ -1,0 +1,35 @@
+.nav_main {
+    background-color: plum;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 4%;
+}
+
+.nav_images-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.womans_face-img {
+    width: 29%;
+}
+
+.lipstick-img {
+    width: 46%;
+}
+
+.counter_makeup-img {
+    width: 42%;
+}
+
+.makeups-img {
+    width: 41%;
+    padding: 7px 0;
+}

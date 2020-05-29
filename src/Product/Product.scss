@@ -1,0 +1,16 @@
+.product_card {
+    border-radius: 3px;
+    box-shadow: 20px 12px 15px 1px #141415a3;
+    text-align: center;
+    // grid-area: card;
+    padding: 3%;
+}
+
+.product_img {
+    width: 120px;
+    &:hover {
+        // cursor: pointer;
+        transform: scale(1.3);
+        transition: all .4s ease-in-out;
+    }
+}

@@ -5,8 +5,9 @@ import { getProducts } from '../Util/apiCall';
 import { addFoundations, addEyeShadows, addBlushes, addBronzers, addLipsticks, addMascaras, isLoading } from '../actions';
 import Nav from '../Nav/Nav';
 import Categories from '../Categories/Categories';
-import { Product } from '../Product/Product';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import Container from '../Container/Container';
+// import { Product } from '../Product/Product';
+import { Route, Switch } from 'react-router-dom';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ export const App = () => {
   const [bronzer, setAllBronzers] = useState([]);
   const [lipstick, setAllLipsticks] = useState([]);
   const [mascara, setAllMascaras] = useState([]);
+  const [loading, isLoading] = useState(true);
 
   const fetchProducts = async () => {
       try {
@@ -44,24 +46,27 @@ export const App = () => {
           setAllMascaras(mascaras);
           dispatch(addMascaras(mascaras));
 
-      } catch({ message }) {
-          isLoading(false)
-          console.log(message);
-      }
+        } catch({ message }) {
+            isLoading(false)
+            console.log(message);
+        }
   };
 
-        useEffect(() => {
-          fetchProducts();
-        }, []);
+    useEffect(() => {
+      fetchProducts();
+    }, []);
 
-  
+    const props = (foundation, mascara, eyeShadow, bronzer, blush, lipstick)
     return (
+      <>
       <Switch >
         <Route exact path='/' render={() => <> <Nav /> <Categories /> </>} />
+        {/* <Route path='/products' component={Product} /> */}
         <Route exact path='/products/:type' render={({match}) => {
-            let productType = Object.keys(this.props).find(type => type === match.params.type)
-          return <> <Nav /><Product productType={this.props[productType]} toggleCollection={this.toggleCollection} /> </>}}/>
+            let productType = Object.keys(props).find(type => type === match.params.type)
+          return <> <Nav /><Container productType={props[productType]} toggleCollection={this.toggleCollection} /> </>}}/>
      </Switch >
+     </>
     );
 };
 

@@ -1,0 +1,22 @@
+.all_categories-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 4fr));
+    grid-template-rows: auto;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-gap: 3%;
+    padding: 3%;
+}
+
+.loading_img {
+    width: 20%;
+    display: block;
+    margin: auto
+}
+
+.category_type-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 200px 0 200px;
+}
