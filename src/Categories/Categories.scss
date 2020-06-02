@@ -13,10 +13,23 @@
     margin: auto
 }
 
-.category_type-section {
+.back_btn-div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding: 1%;
     justify-content: center;
-    padding: 10px 200px 0 200px;
+    background-color: plum;
+}
+
+.back_btn {
+    font-size: 2em;
+    border-radius: 16px;
+    padding: 7%;
+    box-shadow: #3a3a3a 7px 5px 8px 0px;
+    border-style: none;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .2s ease-in-out;
+        background-color: teal;
+    }
 }
