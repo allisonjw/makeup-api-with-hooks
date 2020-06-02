@@ -5,7 +5,6 @@ import { addFoundations, addEyeShadows, addBlushes, addBronzers, addLipsticks, a
 import './Container.scss';
 import { Route } from 'react-router-dom';
 import Categories from '../Categories/Categories';
-import Nav from '../Nav/Nav';
 
 export const Container = () => {
     const dispatch = useDispatch();
@@ -62,8 +61,8 @@ export const Container = () => {
       <>
         <Route exact path='/products/:type' render={({match}) => {
             let productType = Object.keys(allStates).find(type => type === match.params.type)
-        return <> <Nav /> <Categories productType={allStates[productType]} /> </>}}/>  
-        <Route exact path='/shopall' render={() => <><Nav /><Categories type='shopall' allCategoriesArray={allCategoriesArray} /> </>} />    
+        return <> <Categories productType={allStates[productType]} /> </>}}/>  
+        <Route exact path='/shopall' render={() => <> <Categories type='shopall' allCategoriesArray={allCategoriesArray} /> </>} />    
       </>
     )
   }
