@@ -11,8 +11,8 @@ export const App = () => {
       <Container />
       <Switch >
         <Route exact path='/' render={() => <> <Nav /> </>} />
-        <Route path='./container' render={() => <>  <Nav /> <Container /> </>} />
-        <Route path='./categories' render={() => <>  <Nav /> <Categories /> </>} />
+        <Route path='./container' render={() => <>  <Container /> </>} />
+        <Route path='./categories' render={() => <>  <Categories /> </>} />
      </Switch >
      </>
     );
