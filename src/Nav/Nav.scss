@@ -18,18 +18,40 @@ h1 {
 }
 
 .womans_face-img {
-    width: 29%;
+    width: 17%;
 }
 
 .lipstick-img {
-    width: 46%;
+    width: 26%;
 }
 
 .counter_makeup-img {
-    width: 42%;
+    width: 25%;
 }
 
 .makeups-img {
-    width: 41%;
-    padding: 7px 0;
+    width: 23%;
+}
+
+.category_type-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+.category_btn {
+    font-size: 1.1em;
+    border-radius: 3px;
+    padding: 1.5%;
+    box-shadow: #3a3a3a 7px 5px 8px 0px;
+    border-style: none;
+        &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all .2s ease-in-out;
+        background-color: teal;
+        // opacity: ;
+    }
 }

@@ -15,7 +15,7 @@ export const Nav = () => {
         <section className="category_type-section">
           <Link to={'products/foundation'}> 
             <button 
-              className="foundation_btn"
+              className="category_btn"
               type="submit"
               name="foundation">
               FOUNDATION
@@ -23,7 +23,7 @@ export const Nav = () => {
           </Link>
           <Link to="products/blush">
             <button 
-              className="blush_btn"
+              className="category_btn"
               type="submit"
               name="blush">
               BLUSH
@@ -31,7 +31,7 @@ export const Nav = () => {
           </Link>
           <Link to="/products/mascara">
             <button 
-              className="mascara_btn"
+              className="category_btn"
               type="submit"
               name="mascara">
               MASCARA
@@ -39,7 +39,7 @@ export const Nav = () => {
           </Link>
           <Link to="/products/eyeShadow">
             <button 
-              className="eyeshadow_btn"
+              className="category_btn"
               type="submit"
               name="eyeshadow">
               EYESHADOW
@@ -47,7 +47,7 @@ export const Nav = () => {
           </Link>
           <Link to="/products/lipstick">
             <button 
-              className="lipstick_btn"
+              className="category_btn"
               type="submit"
               name="lipstick">
               LIPSTICK
@@ -55,7 +55,7 @@ export const Nav = () => {
           </Link>
           <Link to="/products/bronzer">
             <button 
-              className="bronzer_btn"
+              className="category_btn"
               type="submit"
               name="bronzer">
               BRONZER
@@ -63,7 +63,7 @@ export const Nav = () => {
           </Link>
           <Link to="/shopall">
             <button 
-              className="shopAll_btn"
+              className="category_btn"
               type="submit"
               name="shopAll">
               SHOP ALL
