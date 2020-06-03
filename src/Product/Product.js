@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import './Product.scss';
 import '../Categories/Categories.scss';
 
-export const Product = ({ id, brand, name, image_link, product_link, description, tag_list }) => {
+export const Product = ({ brand, name, image_link, product_link, description }) => {
     const isLoading = useSelector(state => state.isLoading);
 
     

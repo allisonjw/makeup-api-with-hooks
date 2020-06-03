@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap");
+
 .nav_main {
     background-color: plum;
+    min-height: 100vh;
+    font-family: 'Lexend Tera', sans-serif;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: center;
     font-weight: 700;
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .nav_images-div {
@@ -15,6 +19,9 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin: 4% 0;
+    padding: 3% 0;
+    background-color: white;
 }
 
 .womans_face-img {
@@ -38,7 +45,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 10px 0;
+    padding: 2% 0;
 }
 
 .category_btn {
@@ -47,11 +54,23 @@ h1 {
     padding: 1.5%;
     box-shadow: #3a3a3a 7px 5px 8px 0px;
     border-style: none;
+    width: 150px;
+    margin: 2%;
         &:hover {
         cursor: pointer;
         transform: scale(1.1);
         transition: all .2s ease-in-out;
         background-color: teal;
-        // opacity: ;
     }
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+.button_category-img {
+    width: 120px;
 }
