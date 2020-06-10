@@ -13,13 +13,18 @@ export const Product = ({ brand, name, image_link, product_link, description }) 
     {!isLoading && <section className="product_card">
             <h3 className="product_h3">{name}</h3>
             <h4 className="product_h4">{brand}</h4>
-            <object className='product_img' data={image_link} type='image/jpg' alt={name}>
-                <img href={product_link} className='product_img' src={require('../Images/default_image.jpg')} alt='default' />
-            </object>
+            <a href={product_link} >
+              <object 
+                className='product_img product_link' 
+                data={image_link} 
+                type='image/jpg' 
+                alt={name}>
+                  <img href={product_link} 
+                    className='product_img product_link' 
+                    src={require('../Images/default_image.jpg')} alt='default' />
+              </object>
+            </a>
             <p className="product_description">{description}</p>
-            <a href={product_link}
-            className="product_link">
-                Product Link</a>
         </section>}
         </>
     )

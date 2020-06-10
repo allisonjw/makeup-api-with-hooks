@@ -11,7 +11,7 @@
     perspective: 200px;
     transition: all .2s ease;
         &:hover {
-            transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(-5px, 5px);
+            transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
         }
 }
 
@@ -21,18 +21,18 @@
 }
 
 .product_link {
-    font-size: 1.2em;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease;
     &:hover {
         cursor: pointer;
-        color: teal;
-        font-size: 1.3em;
+        border-radius: 10px;
+        box-shadow: 6px 6px 9px #8d8d8d;
+        transform: scale(1.1) translateX(-10px);
     }
 }
 
 .product_h3,
 .product_h4 {
-    margin-bottom: 1%;
+    margin-bottom: 2.2%;
 }
 
 .product_description {
