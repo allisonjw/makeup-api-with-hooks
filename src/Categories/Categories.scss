@@ -5,6 +5,12 @@
     /* grid-template-columns: repeat(4, 1fr); */
     grid-gap: 3%;
     padding: 3%;
+    animation: fade-in 1s ease-out both 0.3s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
 
 .loading_img {

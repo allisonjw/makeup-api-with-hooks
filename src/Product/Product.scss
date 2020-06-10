@@ -4,10 +4,15 @@
     text-align: center;
     padding: 3%;
     background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .product_img {
     width: 120px;
+    height: 120px;
 }
 
 .product_link {
@@ -15,7 +20,20 @@
     &:hover {
         cursor: pointer;
         color: teal;
-        font-size: 1.5em;
+        font-size: 1.3em;
         transition: all .4s ease-in-out;
     }
+}
+
+.product_h3,
+.product_h4 {
+    margin-bottom: 1%;
+}
+
+.product_description {
+    margin: 2% 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
