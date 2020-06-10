@@ -25,7 +25,21 @@ h1 {
     text-align: center;
     font-weight: 700;
     padding-top: 2%;
-}
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .nav_images-div {
     display: flex;
@@ -38,7 +52,6 @@ h1 {
     background-color: white;
 }
 
-h1,
 .nav_images-div {
     -webkit-animation: animation 1000ms ease-in 1 backwards;
     animation: animation 1000ms ease-in 1 backwards;
@@ -117,7 +130,7 @@ h1,
     margin: 2%;
         &:hover {
         cursor: pointer;
-        transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(5px);
+        transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(1px);
         box-shadow: inset #3a3a3a -2px -4px 7px 0px;    
         }
 }

@@ -32,10 +32,12 @@
     padding: 7%;
     box-shadow: #3a3a3a 7px 5px 8px 0px;
     border-style: none;
-    &:hover {
+    width: 150px;
+    transition: all .2s ease;
+    margin: 2%;
+        &:hover {
         cursor: pointer;
-        transform: scale(1.1);
-        transition: all .2s ease-in-out;
-        background-color: teal;
-    }
+        transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(1px);
+        box-shadow: inset #3a3a3a -2px -4px 7px 0px;    
+        }
 }

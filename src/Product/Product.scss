@@ -8,6 +8,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    perspective: 200px;
+    transition: all .2s ease;
+        &:hover {
+            transform: matrix3d(0.94, 0, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(-5px, 5px);
+        }
 }
 
 .product_img {
@@ -17,11 +22,11 @@
 
 .product_link {
     font-size: 1.2em;
+    transition: all .4s ease-in-out;
     &:hover {
         cursor: pointer;
         color: teal;
         font-size: 1.3em;
-        transition: all .4s ease-in-out;
     }
 }
 
